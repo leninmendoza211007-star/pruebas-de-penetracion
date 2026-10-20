@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="html-title">Crear Cuenta - PentestX</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a tu CSS personalizado -->
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body class="h-full flex flex-col justify-between relative overflow-x-hidden m-0">
+
+    <!-- Canvas para el fondo de red de nodos luminosos -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <header class="w-full py-4 px-6 md:px-12 flex items-center justify-between z-20 bg-transparent">
+        <div class="flex items-center space-x-2">
+            <span class="text-xl font-bold tracking-wider text-white">Pentest<span class="text-blue-500">X</span></span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8 text-sm text-gray-300">
+            <a href="index.html" class="hover:text-blue-400 transition" data-translate="inicio">Inicio</a>
+            <a href="servicios.html" class="hover:text-blue-400 transition" data-translate="servicios">Servicios</a>
+            <a href="nosotros.html" class="hover:text-blue-400 transition" data-translate="nosotros">Nosotros</a>
+            <a href="contacto.html" class="hover:text-blue-400 transition" data-translate="contacto">Contacto</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <select id="langSelector" aria-label="Seleccionar idioma" class="bg-gray-900/60 border border-gray-700 text-gray-300 text-sm rounded-lg px-3 py-1.5 focus:outline-none focus:border-blue-500">
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+            </select>
+            <a href="login.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-4 py-2 rounded-lg shadow-lg shadow-blue-500/30 transition" data-translate="login">Iniciar sesión</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL / FORMULARIO DE REGISTRO -->
+    <main class="flex-grow flex items-center justify-center relative z-10 px-4 py-8">
+        <div class="w-full max-w-md p-8 bg-gray-900/85 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-500/30">
+            
+            <!-- Encabezado del Formulario -->
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-white tracking-wide">
+                    <span data-translate="crear">Crear</span> <span class="text-blue-500" data-translate="cuenta">Cuenta</span>
+                </h1>
+                <p class="text-gray-400 text-xs mt-1" data-translate="sub_titulo">Únete a nuestra plataforma de ciberseguridad</p>
+            </div>
+
+            <!-- Formulario -->
+            <form action="dashboard.html" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1" data-translate="nombre">Nombre Completo</label>
+                    <input type="text" required class="w-full px-3.5 py-2.5 bg-gray-800/80 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" data-placeholder-translate="placeholder_nombre" placeholder="Tu nombre">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1" data-translate="correo">Correo Electrónico</label>
+                    <input type="email" required class="w-full px-3.5 py-2.5 bg-gray-800/80 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1" data-translate="contrasena">Contraseña</label>
+                    <input type="password" required class="w-full px-3.5 py-2.5 bg-gray-800/80 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="••••••••">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1" data-translate="confirmar_contrasena">Confirmar Contraseña</label>
+                    <input type="password" required class="w-full px-3.5 py-2.5 bg-gray-800/80 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm rounded-lg shadow-lg shadow-blue-500/30 transition duration-200 mt-2" data-translate="btn_registrarse">
+                    Registrarse
+                </button>
+            </form>
+
+            <!-- Enlaces adicionales -->
+            <div class="mt-5 text-center text-xs text-gray-400">
+                <span data-translate="tiene_cuenta">¿Ya tienes una cuenta?</span> 
+                <a href="login.html" class="text-blue-400 hover:underline font-medium" data-translate="inicia_sesion">Inicia sesión</a>
+            </div>
+            <div class="mt-2 text-center text-[11px] text-gray-500">
+                <a href="index.html" class="hover:underline" data-translate="volver">— Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- BARRA INFERIOR / FOOTER -->
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <p><span data-translate="footer_text">Tu seguridad, nuestra prioridad.</span></p>
+        <nav class="footer-links" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.8-.1-1.6-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.2H7.3V13h2.8v8z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M19.6 7.2a6.6 6.6 0 0 1-4.1-1.4v8.1a6.2 6.2 0 1 1-5.4-6.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2.5h3.3c.2 2.1 1.8 3.8 4.1 4.1z"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/>
+            </svg>
+            <span>YouTube</span>
+          </a>
+        </nav>
+        <p><span data-translate="derechos">© 2026 PentestX. Todos los derechos reservados.</span></p>
+      </div>
+    </footer>
+
+    <!-- Script de la red de nodos flotantes -->
+    <script>
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const particles = [];
+        const count = 75;
+
+        for(let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 1.0,
+                vy: (Math.random() - 0.5) * 1.0,
+                radius: Math.random() * 2.2 + 0.8
+            });
+        }
+
+        function animate() {
+            ctx.fillStyle = '#030712';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for(let i = 0; i < particles.length; i++) {
+                for(let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if(dist < 140) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${1 - dist/140})`;
+                        ctx.lineWidth = 0.7;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.fillStyle = '#60a5fa';
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = '#3b82f6';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            });
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+    <!-- Enlace a tu archivo traduccion.js -->
+    <script src="js/Registrotraduccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- BLOQUE 1: metadatos y CSS común. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PentestX | Avance de pruebas</title>
+    <link rel="stylesheet" href="css/progreso.css" />
+  </head>
+  <body class="page-progress">
+    <!-- BLOQUE 2: encabezado homogéneo. -->
+    <!-- BLOQUE 2 — Cabecera global idéntica: logotipo, navegación principal, selector de idioma y acceso. -->
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html" data-i18n="inicio">Inicio</a>
+          <a href="servicios.html" data-i18n="servicios">Servicios</a>
+          <a href="nosotros.html" data-i18n="nosotros">Nosotros</a>
+          <a href="contacto.html" data-i18n="contacto">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <div class="language">
+            <label class="sr-only" for="language-select">Idioma</label>
+            <select id="language-select" aria-label="Seleccionar idioma">
+              <option value="es" selected>Español</option>
+              <option value="en">Inglés</option>
+            </select>
+          </div>
+          <a class="button" href="login.html">Iniciar sesión</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="wrap">
+        <!-- BLOQUE 3: título y explicación del significado de los porcentajes. -->
+        <div class="page-heading">
+          <p class="eyebrow" data-i18n="eyebrow">Área de usuario · Seguimiento</p>
+          <h1 data-i18n="titulo">Avance de tus pruebas de penetración</h1>
+          <p data-i18n="descripcion">
+            Porcentaje ilustrativo de progreso por etapa. Los valores deben
+            actualizarse manualmente en el atributo style de cada indicador; no
+            representan resultados reales.
+          </p>
+        </div>
+        <!-- BLOQUE 4: resumen general. El 68% de ejemplo puede cambiarse en --progress. -->
+        <article class="card progress-overall">
+          <div class="progress-row">
+            <span data-i18n="avance">Avance general</span><strong>68%</strong>
+          </div>
+          <div
+            class="progress-track"
+            role="img"
+            aria-label="Avance general de ejemplo: 68 por ciento"
+          >
+            <div class="progress-fill progress-68"></div>
+          </div>
+          <p class="progress-note">
+            Muestra estática: no conectada a un sistema de seguimiento.
+          </p>
+        </article>
+        <!-- BLOQUE 5: avance por fases de evaluación; cambiar texto y porcentaje conjuntamente. -->
+        <div class="grid two">
+          <article class="card">
+            <div class="progress-row">
+              <span data-i18n="fase1">1. Alcance y reconocimiento</span><strong>100%</strong>
+            </div>
+            <div
+              class="progress-track"
+              role="img"
+              aria-label="Alcance y reconocimiento: 100 por ciento"
+            >
+              <div class="progress-fill progress-100"></div>
+            </div>
+            <p class="progress-note">Etapa de ejemplo · Completada</p>
+          </article>
+          <article class="card">
+            <div class="progress-row">
+              <span data-i18n="fase2">2. Análisis de vulnerabilidades</span><strong>85%</strong>
+            </div>
+            <div
+              class="progress-track"
+              role="img"
+              aria-label="Análisis de vulnerabilidades: 85 por ciento"
+            >
+              <div class="progress-fill progress-85"></div>
+            </div>
+            <p class="progress-note">Etapa de ejemplo · En curso</p>
+          </article>
+          <article class="card">
+            <div class="progress-row">
+              <span data-i18n="fase3">3. Pruebas de penetración</span><strong>60%</strong>
+            </div>
+            <div
+              class="progress-track"
+              role="img"
+              aria-label="Pruebas de penetración: 60 por ciento"
+            >
+              <div class="progress-fill progress-60"></div>
+            </div>
+            <p class="progress-note">Etapa de ejemplo · En curso</p>
+          </article>
+          <article class="card">
+            <div class="progress-row">
+              <span>4. Validación de hallazgos</span><strong>35%</strong>
+            </div>
+            <div
+              class="progress-track"
+              role="img"
+              aria-label="Validación de hallazgos: 35 por ciento"
+            >
+              <div class="progress-fill progress-35"></div>
+            </div>
+            <p class="progress-note">
+              Etapa de ejemplo · Pendiente de completar
+            </p>
+          </article>
+          <article class="card">
+            <div class="progress-row">
+              <span>5. Informe y recomendaciones</span><strong>10%</strong>
+            </div>
+            <div
+              class="progress-track"
+              role="img"
+              aria-label="Informe y recomendaciones: 10 por ciento"
+            >
+              <div class="progress-fill progress-10"></div>
+            </div>
+            <p class="progress-note">Etapa de ejemplo · Pendiente</p>
+          </article>
+          <article class="card">
+            <h3>Cómo actualizar el porcentaje</h3>
+            <p>
+              En el HTML, cambia el valor numérico junto al título y el
+              porcentaje de <code>--progress:NN%</code>. Mantén ambos valores
+              iguales. Un sistema real requiere backend o JavaScript para
+              guardar el avance del usuario.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- BLOQUE 6: pie compartido. -->
+    <!-- BLOQUE FINAL — Pie global idéntico en todas las páginas: marca, enlaces del sitio y derechos. -->
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <p>Tu seguridad, nuestra prioridad.</p>
+        <nav class="footer-links" aria-label="Enlaces del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <p>© 2026 PentestX. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="js/cuadrantes.js"></script>
+    <script src="js/progresotraduccion.js"></script>
+    <script src="js/idioma-global.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- BLOQUE 1: metadatos, CSS común y ajuste CSS exclusivo del formulario. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PentestX | Acceso</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body class="page-login">
+    <!-- BLOQUE 2: cabecera común para que el acceso no parezca un producto separado. -->
+    <!-- BLOQUE 2 — Cabecera global idéntica: logotipo, navegación principal, selector de idioma y acceso. -->
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <div class="language">
+            <label class="sr-only" for="language-select">Idioma</label>
+            <select id="language-select" aria-label="Seleccionar idioma">
+              <option value="es" selected>Español</option>
+              <option value="en">Inglés</option>
+            </select>
+          </div>
+          <a class="button" href="login.html">Iniciar sesión</a>
+        </div>
+      </div>
+    </header>
+    <main class="login-main">
+      <canvas id="cyber-particles" aria-hidden="true"></canvas>
+      <!-- BLOQUE 3: tarjeta de acceso. El envío requiere backend para autenticar. -->
+      <section class="card login-card">
+        <p class="eyebrow">Área de usuario</p>
+        <h1>Iniciar sesión</h1>
+        <p>Accede a tu panel de auditorías y reportes.</p>
+        <form id="login-form" action="#" method="post">
+          <div class="field">
+            <label for="correo">Correo electrónico</label
+            ><input
+              id="correo"
+              name="correo"
+              type="email"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="clave">Contraseña</label>
+            <div class="password-wrapper">
+              <input
+                id="clave"
+                name="clave"
+                type="password"
+                autocomplete="current-password"
+                required
+              />
+              <button
+                class="password-toggle"
+                id="toggle-password"
+                type="button"
+                aria-label="Mostrar contraseña"
+                aria-controls="clave"
+                aria-pressed="false"
+              >
+                <svg
+                  class="eye-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="button" type="submit">Entrar</button>
+          <a class="button-secondary register-button" href="registro.html">
+            Registrarse
+          </a>
+        </form>
+        <div id="login-error" class="login-error" role="alert" hidden>
+          <strong>Credenciales incorrectas.</strong>
+          Comprueba tu correo electrónico o contraseña, o
+          <a href="registro.html">regístrate</a> si todavía no tienes una cuenta.
+        </div>
+        <p class="login-footnote">
+          <a href="contacto.html">¿Necesitas ayuda? Contacta al equipo.</a>
+        </p>
+      </section>
+    </main>
+    <!-- BLOQUE 4: pie común. -->
+    <!-- BLOQUE FINAL — Pie global idéntico en todas las páginas: marca, enlaces del sitio y derechos. -->
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <p data-i18n="lema">Tu seguridad, nuestra prioridad.</p>
+        <nav class="footer-links" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.8-.1-1.6-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.2H7.3V13h2.8v8z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M19.6 7.2a6.6 6.6 0 0 1-4.1-1.4v8.1a6.2 6.2 0 1 1-5.4-6.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2.5h3.3c.2 2.1 1.8 3.8 4.1 4.1z"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/>
+            </svg>
+            <span>YouTube</span>
+          </a>
+        </nav>
+        <p data-i18n="derechos">© 2026 PentestX. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="js/particleslogin.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/logintraduccion.js"></script>
+
+  </body>
+</html>

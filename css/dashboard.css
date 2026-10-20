@@ -1,0 +1,490 @@
+/* 1. BASE: normaliza tamaños y tipografía para evitar saltos visuales entre páginas. */
+:root {
+  --ink: #102033;
+  --muted: #62748a;
+  --navy: #071525;
+  --blue: #1389ef;
+  --pale: #f3f7fb;
+  --line: #dce5ef;
+  --white: #fff;
+  --radius: 14px;
+  --shadow: 0 12px 35px rgba(10, 35, 65, 0.08);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--pale);
+  color: var(--ink);
+  font:
+    16px/1.6 "Segoe UI",
+    Arial,
+    sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+/* 2. CONTENEDOR: centra el contenido con el mismo ancho en páginas distintas. */
+.wrap {
+  width: min(1160px, 92%);
+  margin-inline: auto;
+}
+main {
+  flex: 1;
+  padding: 48px 0 64px;
+}
+/* 3. CABECERA: marca a la izquierda, enlaces centrales y controles arriba a la derecha. */
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 3px 18px #07152522;
+}
+.header-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.brand {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.brand span {
+  color: #48aaff;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.5vw, 32px);
+  margin-inline: auto;
+}
+.main-nav a {
+  color: #d8e3ef;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 26px 0 23px;
+  border-bottom: 3px solid transparent;
+}
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: #fff;
+  border-bottom-color: var(--blue);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+.language {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #d8e3ef;
+  font-size: 0.85rem;
+}
+.language a {
+  padding: 5px 7px;
+  border: 1px solid #35465a;
+  border-radius: 7px;
+}
+.language a:hover,
+.language a[aria-current="page"] {
+  border-color: #48aaff;
+  color: #fff;
+}
+.button,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 17px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+.button {
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid var(--blue);
+}
+.button:hover {
+  background: #0874ce;
+}
+.button-secondary {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+/* 4. ENCABEZADOS: escala tipográfica y espaciado compartidos en todo el sitio. */
+.page-heading {
+  margin: 0 0 30px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.page-heading h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+.page-heading p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+}
+/* 5. TARJETAS Y CUADRÍCULAS: apariencia equivalente en servicios, valores y métricas. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.card {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.card h2,
+.card h3 {
+  margin: 0 0 9px;
+  line-height: 1.3;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+.card .icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #e8f4ff;
+  color: #0874ce;
+  font-weight: 800;
+}
+/* 6. TABLAS Y DATOS: panel legible, con desplazamiento horizontal en pantallas pequeñas. */
+.table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+th,
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+th {
+  background: #f7faff;
+  color: #496078;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+tr:last-child td {
+  border-bottom: 0;
+}
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background: #e8f4ff;
+  color: #096dbd;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+/* 7. FORMULARIOS: mismos campos, foco visible y mensajes de obligatorio. */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field.full {
+  grid-column: 1/-1;
+}
+.field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd7e4;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 3px solid #1389ef30;
+  border-color: var(--blue);
+}
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+/* 8. BARRA DE AVANCE: porcentaje visual estático controlado por --progress en el HTML. */
+.progress-track {
+  height: 13px;
+  overflow: hidden;
+  background: #e6edf5;
+  border-radius: 99px;
+}
+.progress-fill {
+  width: var(--progress, 0%);
+  height: 100%;
+  background: linear-gradient(90deg, #0874ce, #46b2ff);
+  border-radius: inherit;
+}
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.progress-note {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+/* 9. PIE: cierre común y discreto para páginas informativas. */
+.site-footer {
+  padding: 22px 0;
+  background: var(--navy);
+  color: #d8e3ef;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+.footer-links {
+  display: flex;
+  gap: 16px;
+  font-size: 0.88rem;
+}
+/* 10. RESPONSIVE: reorganiza navegación, tarjetas y formularios en móviles. */
+@media (max-width: 850px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 18px;
+    padding: 14px 0;
+  }
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin: 0;
+    gap: 22px;
+  }
+  .main-nav a {
+    padding: 7px 0 9px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+}
+@media (max-width: 560px) {
+  main {
+    padding: 32px 0 46px;
+  }
+  .grid,
+  .grid.two,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .field.full {
+    grid-column: auto;
+  }
+  .header-actions .button {
+    padding: 7px 10px;
+    font-size: 0.84rem;
+  }
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .card {
+    padding: 19px;
+  }
+}
+
+/* 11. SELECTOR DE IDIOMA: control visual nativo; su acción se conectará posteriormente con JavaScript. */
+.language select {
+  padding: 6px 9px;
+  border: 1px solid #35465a;
+  border-radius: 7px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.language select:focus {
+  outline: 2px solid #48aaff;
+  outline-offset: 2px;
+}
+.language option {
+  background: var(--navy);
+  color: #fff;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   REGLAS EXCLUSIVAS DE DASHBOARD.CSS
+   Cada página mantiene este archivo independiente; no requiere styles.css externo.
+   ========================================================= */
+
+/* BLOQUE ESPECÍFICO DEL PANEL — Espacia la tabla de auditorías y su acceso. */
+body.page-dashboard .dashboard-action {
+  margin-top: 20px;
+}
+
+/* =========================================================
+   PANEL DINÁMICO — filtros, orden de columnas y estados (usado por js/dashboard.js)
+   ========================================================= */
+body.page-dashboard .page-heading + .grid + h2 {
+  margin: 34px 0 14px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.toolbar .field {
+  min-width: 170px;
+  flex: 1 1 170px;
+}
+.toolbar-reset {
+  min-height: 42px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.table-count {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.sort-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.sort-btn::after {
+  content: " \2195";
+  opacity: 0.4;
+}
+.sort-btn.is-active::after {
+  opacity: 1;
+  color: var(--blue);
+}
+.sort-btn.is-active[data-dir="asc"]::after {
+  content: " \2191";
+}
+.sort-btn.is-active[data-dir="desc"]::after {
+  content: " \2193";
+}
+.sort-btn:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.badge-completado { background: #e3f7ea; color: #14773a; }
+.badge-en-proceso { background: #fff3d9; color: #96610a; }
+.badge-revisado   { background: #e8f4ff; color: #096dbd; }
+.badge-pendiente  { background: #eceff3; color: #4b5b6e; }
+
+.risk { font-weight: 700; }
+.risk-alto  { color: #c62828; }
+.risk-medio { color: #b26a00; }
+.risk-bajo  { color: #14773a; }
+
+.tabla-vacia {
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+.toolbar .field input,
+.toolbar .field select {
+  height: 44px;
+  padding-block: 0;
+}
+.toolbar-reset {
+  height: 44px;
+}

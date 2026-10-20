@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PentestX | Contacto</title>
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
+  <body class="page-contact">
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <div class="language">
+            <label class="sr-only" for="language-select">Idioma</label>
+            <select id="language-select" aria-label="Seleccionar idioma">
+              <option value="es" selected>Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <a class="button" href="login.html">Iniciar sesión</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="wrap">
+        <div class="page-heading">
+          <p class="eyebrow">Hablemos</p>
+          <h1>Solicita una evaluación de seguridad</h1>
+          <p>
+            Completa el formulario y nuestro equipo podrá ponerse en contacto
+            contigo para definir alcance y siguientes pasos.
+          </p>
+        </div>
+        <div class="grid two">
+          <section class="card">
+            <h2>Cuéntanos sobre tu necesidad</h2>
+            <form action="#" method="post" class="form-grid" novalidate aria-label="Formulario de contacto">
+              <div class="field">
+                <label for="nombre">Nombre completo *</label
+                ><input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Ej. Paulo Carrillo" 
+                  minlength="2"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="empresa">Empresa</label
+                ><input
+                  id="empresa"
+                  name="empresa"
+                  autocomplete="organization"
+                />
+              </div>
+              <div class="field">
+                <label for="email">Correo electrónico *</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="nombre@empresa.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label
+                ><input
+                  id="telefono"
+                  name="telefono"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+51 987 654 321"
+                />
+              </div>
+              <div class="field full">
+                <label for="servicio">Servicio de interés *</label
+                ><select id="servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option>Pruebas de penetración</option>
+                  <option>Auditoría web y móvil</option>
+                  <option>Análisis de vulnerabilidades</option>
+                  <option>Seguridad en la nube</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="mensaje">Descripción</label
+                ><textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Cuéntanos brevemente sobre el alcance que necesitas."
+                  maxlength="1000"
+                ></textarea>
+              </div>
+              <div class="field full">
+                <button class="button" type="submit">Enviar solicitud</button>
+              </div>
+            </form>
+          </section>
+          <!-- BLOQUE 5: información auxiliar y formas de contacto. -->
+          <aside class="card">
+            <h2>¿Por qué PentestX?</h2>
+            <p>
+              Equipo especializado, metodología estructurada, resultados
+              accionables y confidencialidad durante la evaluación.
+            </p>
+            <h3>Contacto directo</h3>
+
+            <p>
+              <span class="contact-email-label">Correo:</span>
+              <a href="mailto:info@pentestx.com">info@pentestx.com</a>
+            </p>
+
+            <p>
+              <span class="contact-phone-label">Teléfono:</span>
+              <a href="tel:+51987654321">+51 987 654 321</a>
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <!-- BLOQUE 6: cierre de marca reutilizable. -->
+    <!-- BLOQUE FINAL — Pie global idéntico en todas las páginas: marca, enlaces del sitio y derechos. -->
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="index.html">Pentest<span>X</span></a>
+        <p>Tu seguridad, nuestra prioridad.</p>
+        <nav class="footer-links" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.8-.1-1.6-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.2H7.3V13h2.8v8z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M19.6 7.2a6.6 6.6 0 0 1-4.1-1.4v8.1a6.2 6.2 0 1 1-5.4-6.1v3.3a2.9 2.9 0 1 0 2.1 2.8V2.5h3.3c.2 2.1 1.8 3.8 4.1 4.1z"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6z"/>
+            </svg>
+            <span>YouTube</span>
+          </a>
+        </nav>
+        <p>© 2026 PentestX. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="js/contactotraduccion.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/idioma-global.js"></script>
+    
+
+  </body>
+</html>
